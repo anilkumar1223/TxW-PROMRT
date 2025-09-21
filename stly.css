@@ -1,0 +1,164 @@
+/*Css/* Splash Screen Styles */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-animation {
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.letter {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s ease-out;
+}
+
+.letter.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.letter-t {
+  color: #ffffff;
+}
+
+.letter-x {
+  color: #ff0000;
+}
+
+.letter-w {
+  color: #ffffff;
+}
+
+/* Main Content Styles */
+.main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.main-content.show {
+  opacity: 1;
+}
+
+/* Your Original CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  color: #ff0000;
+}
+
+header {
+  background: #000000;
+  padding: 1px 2px;
+  text-align: center;
+  height:50px ;
+  border-bottom: 1px solid #000000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.categories button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #fdf9f9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categories button.active {
+  background: #ff0000;
+  color: #fdfffc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-size: 12px;
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.copy-btn {
+  align-self: flex-start;
+  padding: 6px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background: #000000;
+  color: #ff0000;
+}
